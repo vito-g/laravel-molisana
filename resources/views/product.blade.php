@@ -128,3 +128,6 @@ $array = json_decode($data, true);
 // echo $data;
 
 @endphp
+
+{{-- questa è la pagina prodotto {{ $idProduct}}
+{{ $data[$idProduct]['descrizione']}} --}}

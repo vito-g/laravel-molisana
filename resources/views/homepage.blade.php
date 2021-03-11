@@ -123,8 +123,14 @@ $data = '[
   }
   ]';
 
-$array = json_decode($data, true);
+$data = json_decode($data, true);
 
-// echo $data;
 
 @endphp
+
+@foreach ($data as $key => $pasta)
+  <div class="single-box">
+    <img src="{{ $pasta['src'] }}">
+    {{-- {{$pasta['cottura']}} --}}
+  </div>
+@endforeach
