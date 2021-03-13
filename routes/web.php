@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//In alternativa ma valida solo per la GET (non anche per la POST):
+// Route:: view('/', 'welcome');
+
 Route::get('/homepage', function () {
     return view('homepage');
 });
@@ -28,7 +31,12 @@ Route::get('/product', function () {
 // Route::get('/layout', function () {
 //     return view('layout.layout');
 // });
+//
+// Route::get('/layout', function () {
+//     return view('layout.section-page');
+// });
 
+//Per inviare l'array di parametri ['name' =>'Taylor'] procedo come di seguito e per stampare name in layout utilizzo la sintasi {{name}}
 Route::get('/layout', function () {
-    return view('layout.section-page');
+    return view('layout.section-page', ['name' => 'Taylor']);
 });
