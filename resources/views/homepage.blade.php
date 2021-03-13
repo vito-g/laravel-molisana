@@ -140,7 +140,6 @@ $data = json_decode($data, true);
 
     @include('components.header')
 
-
     @foreach ($data as $key => $pasta)
       <div class="single-box">
         @if ($loop -> count)
