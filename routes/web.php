@@ -24,3 +24,11 @@ Route::get('/homepage', function () {
 Route::get('/product', function () {
     return view('product');
 });
+
+// Route::get('/layout', function () {
+//     return view('layout.layout');
+// });
+
+Route::get('/layout', function () {
+    return view('layout.section-page');
+});

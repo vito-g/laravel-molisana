@@ -1,1 +1,7 @@
-
+body {
+  background-color: grey;
+  color: red;
+}
+body header {
+  border: 1px solid red;
+}

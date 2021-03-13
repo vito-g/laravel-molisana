@@ -124,13 +124,42 @@ $data = '[
   ]';
 
 $data = json_decode($data, true);
-
+// print_r($data);
 
 @endphp
 
-@foreach ($data as $key => $pasta)
-  <div class="single-box">
-    <img src="{{ $pasta['src'] }}">
-    {{-- {{$pasta['cottura']}} --}}
-  </div>
-@endforeach
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {{-- Vecchio sistema per linkare il css --}}
+    <link rel="stylesheet" href="css/app.css">
+    <title></title>
+  </head>
+  <body>
+
+    @include('components.header')
+
+
+    @foreach ($data as $key => $pasta)
+      <div class="single-box">
+        @if ($loop -> count)
+          questa è la ultima pasta
+        @endif
+        <img src="{{ $pasta['src'] }}">
+        {{-- {{$pasta['cottura']}} --}}
+      </div>
+    @endforeach
+
+    @foreach ($data as $key => $pasta)
+      <div class="single-box">
+        <b>{{$key + 1}}:</b><br>
+        @foreach ($pasta as $keypasta => $text)
+          {{$keypasta}}: {{$text}} <br>
+        @endforeach
+      </div>
+    @endforeach
+
+    @include('components.footer')
+  </body>
+</html>
