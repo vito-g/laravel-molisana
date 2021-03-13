@@ -45,7 +45,7 @@ Route::get('/layout', function () {
 Route::get('/product/{id}', function ($id) {
     return view('product', ['idProduct' => $id]);
 });
-
+// --------------------------------------------------------
 Route::get('/homepage-molisana', function () {
-    return view('homepage-molisana');
+    return view('components.main');
 });
