@@ -123,11 +123,13 @@ $data = '[
   }
   ]';
 
-$array = json_decode($data, true);
+$data = json_decode($data, true);
 
-// echo $data;
+// print_r($data);
 
 @endphp
 
-{{-- questa è la pagina prodotto {{ $idProduct}}
-{{ $data[$idProduct]['descrizione']}} --}}
+{{-- questa è la pagina prodotto {{0}} --}}
+{{-- {{ $data[0]['descrizione'] }} --}}
+questa è la pagina prodotto {{$idProduct}}
+{{ $data[$idProduct]['descrizione'] }}

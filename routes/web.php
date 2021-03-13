@@ -40,3 +40,8 @@ Route::get('/product', function () {
 Route::get('/layout', function () {
     return view('layout.section-page', ['name' => 'Taylor']);
 });
+
+//Facciamo un esempio con la pagina product:
+Route::get('/product/{id}', function ($id) {
+    return view('product', ['idProduct' => $id]);
+});
