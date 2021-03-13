@@ -1,3 +1,4 @@
+<!-- N:B: bootsrap/app.php NON VA MAI TOCCATA -->
 <?php
 
 /*
@@ -10,9 +11,9 @@
 | the IoC container for the system binding all of the various parts.
 |
 */
-
+////Miei Commenti_9: CREA una NUOVA APPLICAZIONE LARAVEL
 $app = new Illuminate\Foundation\Application(
-    $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
+    $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__) //DEFinisce il PATH ATTUALE
 );
 
 /*
@@ -27,7 +28,7 @@ $app = new Illuminate\Foundation\Application(
 */
 
 $app->singleton(
-    Illuminate\Contracts\Http\Kernel::class,
+    Illuminate\Contracts\Http\Kernel::class, //Attiva i SUPER POTERI dell'HTTP
     App\Http\Kernel::class
 );
 
@@ -49,7 +50,10 @@ $app->singleton(
 | This script returns the application instance. The instance is given to
 | the calling script so we can separate the building of the instances
 | from the actual running of the application and sending responses.
+
+TRADUZIONE: Questo script restituisce l'istanza dell'applicazione. L'istanza viene assegnata allo script chiamante in modo da poter separare la costruzione delle istanze
+dall'effettiva esecuzione dell'applicazione e dall'invio delle risposte.
 |
 */
 
-return $app;
+return $app; //Ritorna all'applicazione
