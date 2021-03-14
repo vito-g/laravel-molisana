@@ -129,8 +129,8 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
 
 @endphp
 
-@extends('layout.homepage-molisana')
-@section('content-homepage')
+@extends('layout.molisana')
+@section('content-main')
   {{-- questa è la main --}}
   <div class="main-container">
 
