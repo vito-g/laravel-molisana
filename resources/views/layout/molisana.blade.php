@@ -12,7 +12,7 @@
         @include('components.header')
 
       <main>
-        @yield('content-homepage')
+        @yield('content-main')
       </main>
 
         @include('components.footer')
