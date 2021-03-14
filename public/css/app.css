@@ -5,6 +5,9 @@ body {
 body .container header, body .container footer {
   border: 1px solid red;
 }
+body .container main .zoomIn-product img {
+  width: 100%;
+}
 body .container main .main-container {
   width: 1000px;
   margin: auto;
