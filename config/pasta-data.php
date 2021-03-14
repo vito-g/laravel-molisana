@@ -123,7 +123,7 @@ $data = '[
   }
   ]';
 
-return json_decode($data, true); //Il true si mette perchè l'array è associativo
+return json_decode($data, true); //Il true si mette perchè l'array è associativo. Stiamo mettendo il return perchè il contenuto del presente file (pasta-data.php) è come se fosse una funzione
 
 // print_r($data);
 
