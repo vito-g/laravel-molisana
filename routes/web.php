@@ -25,11 +25,25 @@ Route::get('/', function () {
 //     return view('homepage');
 // });
 
-
-Route::get('/product/{id}', function ($id) {
-    return view('components.product-content', ['idProduct' => $id]);
-});
+//Prendo $data direttamenta da pasta-data.php del folder 'config' riscrivo le istruzioni qui di seguito come più sotto(**)
+// Route::get('/product/{id}', function ($id) {
+//     $data = config('pasta-data');
+//     return view('components.product-content', ['idProduct' => $id, 'data' => $data]);
+// });
 
 Route::get('/homepage', function () {
     return view('components.homepage-content');
+});
+
+//Prendo $data direttamenta da pasta-data.php del folder 'config' e lo invio come parametro al template homepage-content.blade.php in cui diventerà una variabile
+Route::get('/homepage', function () {
+    // dump('ciao');
+    $data = config('pasta-data');
+    // dump($data);
+    return view('components.homepage-content', ['data' => $data]);
+});
+//(**)Prendo $data direttamenta da pasta-data.php del folder 'config' e lo invio come parametro al template product-content.blade.php in cui diventerà una variabile
+Route::get('/product/{id}', function ($id) {
+    $data = config('pasta-data');
+    return view('components.product-content', ['idProduct' => $id, 'data' => $data]);
 });
