@@ -56,14 +56,25 @@ Route::get('/homepage', function () {
 
 
 //(**)Prendendo $data direttamenta da pasta-data.php del folder 'config' e inviandolo, assieme all'id, come parametro al template product-content.blade.php in cui diventerà una variabile:
-
+// (***):
 Route::get('/product/{id}', function ($id) {
     $data = config('pasta-data');//pasta-data è il nome del file che vado a richiamare dal folder 'config
     return view('components.product-content', ['idProduct' => $id, 'data' => $data]);
 });
 
-
+// --------------REDIRECT------------------------
 //Se non viene passato alcun id, relativo alla pagina di prodotto, verrebbe caricata, allo stato attuale, una pagina di errore (404). Posso bypassare il problema attraverso una 'redirect' che mi reindirizzerebbe, per es. alla mia home; esattamente come di seguito:
-Route::get('/product', function () {
-    return redirect('/homepage');
+// Route::get('/product', function () {
+//     return redirect('/homepage');
+// });
+
+//In alternativa posso intervenire sulla (***) ottimizzandola, a tal proposito, come segue: (il codice appena sotto andrà naturalmente a sovrascrivere la (***))
+
+Route::get('/product/{id?}', function ($id = null) {
+    $data = config('pasta-data');//pasta-data è il nome del file che vado a richiamare dal folder 'config
+    if(empty($id)) {
+      return redirect('/homepage');
+    }
+    return view('components.product-content', ['idProduct' => $id, 'data' => $data]);
 });
+// --------------END REDIRECT------------------------
