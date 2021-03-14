@@ -2,7 +2,7 @@ body {
   background-color: white;
   color: black;
 }
-body .container header {
+body .container header, body .container footer {
   border: 1px solid red;
 }
 body .container main .main-container {
