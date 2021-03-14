@@ -126,25 +126,6 @@ $data = '[
 $data = json_decode($data, true); //Il true si mette perchè l'array è associativo
 
 // print_r($data);
-// Creo Array Paste in base alla lunghezza, a partire dalla definizione di array vuoti
-// $lunga = [];
-// $corta = [];
-// $cortissima = [];
-//
-// foreach ($data as $key => $quality) {
-//   if($quality['tipo'] == 'lunga') {
-//     $lunga[]=$quality;
-//   }
-//   elseif($quality['tipo'] == 'corta') {
-//     $corta[]=$quality;
-//   }
-//   else($quality['tipo'] == 'cortissima') {
-//     $cortissima[]=$quality;
-//   }
-//   return view('main', ['lunga' =>$lunga, 'corta' =>$corta, 'cortissima' =>$cortissima);
-// }
-
-
 
 @endphp
 
@@ -153,7 +134,7 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
   {{-- questa è la main --}}
   <div class="main-container">
 
-
+    {{-- Pasta Lunga --}}
     <h2>LE LUNGHE</h2>
 
     <div class="quality">
@@ -162,7 +143,7 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
 
         @if ($pasta['tipo'] == 'lunga')
 
-          <a href="#">
+          <a href="/product/{id}">
             <div class="single-box">
               <img src="{{ $pasta['src'] }}">
             </div>
@@ -173,8 +154,9 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
       @endforeach
 
     </div>
+    {{-- End Pasta Lunga --}}
 
-
+    {{-- Pasta Corta --}}
     <h2>LE CORTE</h2>
 
     <div class="quality">
@@ -194,7 +176,9 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
       @endforeach
 
     </div>
+    {{-- End Pasta Corta --}}
 
+    {{-- Pasta Cortissima --}}
     <h2>LE CORTISSIME</h2>
 
     <div class="quality">
@@ -214,6 +198,7 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
       @endforeach
 
     </div>
+    {{-- End Pasta Cortissima --}}
 
 
   </div>
