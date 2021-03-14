@@ -123,7 +123,7 @@ $data = '[
   }
   ]';
 
-$data = json_decode($data, true);
+$data = json_decode($data, true); //Il true si mette perchè l'array è associativo
 
 // print_r($data);
 
