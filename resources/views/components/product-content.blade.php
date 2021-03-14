@@ -132,7 +132,15 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
 @extends('layout.molisana')
 @section('content-main')
 
-  questa è la pagina prodotto {{$idProduct + 1}}
-  {{ $data[$idProduct]['descrizione'] }}
-  
+  <div class="zoomIn-product">
+
+    {{-- questa è la pagina prodotto {{$idProduct + 1}} --}}
+    {{-- {{ $data[$idProduct]['descrizione'] }} --}}
+    <img src="{{ $data[$idProduct]['src-h'] }}" alt="">
+    <img src="{{ $data[$idProduct]['src-p'] }}" alt="">
+
+    {{-- {{ $data[$idProduct]['src-p'] }} --}}
+
+  </div>
+
 @endsection
