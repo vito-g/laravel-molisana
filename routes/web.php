@@ -20,9 +20,9 @@ Route::get('/', function () {
 //In alternativa ma valida solo per la GET (non anche per la POST):
 // Route:: view('/', 'welcome');
 
-//Se decommentata viene cmq invalidata perchè sovrascritta dall'altra get alla homepage più in basso di questa. L'ultima istruzione a cascata vince.
-// Route::get('/homepage', function () {
-//     return view('homepage');
+//Route per Homepage di prova
+// Route::get('/homepage-prova', function () {
+//     return view('homepage-di-prova');
 // });
 
 // -----------------------------------------------------------
