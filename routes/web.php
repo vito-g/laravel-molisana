@@ -77,4 +77,6 @@ Route::get('/product/{id?}', function ($id = null) {
     }
     return view('components.product-content', ['idProduct' => $id, 'data' => $data]);
 });
+
+//N.B.: la sintassi {id?} assieme a function ($id = null) indica che l'id è opzionale e attraverso un 'if' nel caso l'id sia null, restituisce la homepage
 // --------------END REDIRECT------------------------
