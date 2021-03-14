@@ -37,9 +37,9 @@ Route::get('/homepage', function () {
 // });
 
 //Per inviare l'array di parametri ['name' =>'Taylor'] procedo come di seguito e per stampare name in layout utilizzo la sintasi {{name}}
-Route::get('/layout', function () {
-    return view('layout.section-page', ['name' => 'Taylor']);
-});
+// Route::get('/layout', function () {
+//     return view('layout.section-page', ['name' => 'Taylor']);
+// });
 
 //Facciamo un esempio con la pagina product:
 Route::get('/product/{id}', function ($id) {
