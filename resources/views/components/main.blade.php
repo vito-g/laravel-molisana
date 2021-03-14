@@ -173,6 +173,43 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
     </div>
 
 
+    <h2>LE CORTE</h2>
+
+    <div class="quality">
+
+      @foreach ($data as $key => $pasta)
+
+        @if ($pasta['tipo'] == 'corta')
+
+          <div class="single-box">
+            <img src="{{ $pasta['src'] }}">
+          </div>
+
+        @endif
+
+      @endforeach
+
+    </div>
+
+    <h2>LE CORTISSIME</h2>
+
+    <div class="quality">
+
+      @foreach ($data as $key => $pasta)
+
+        @if ($pasta['tipo'] == 'cortissima')
+
+          <div class="single-box">
+            <img src="{{ $pasta['src'] }}">
+          </div>
+
+        @endif
+
+      @endforeach
+
+    </div>
+
+
   </div>
 
 @endsection
