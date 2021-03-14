@@ -151,7 +151,7 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
 @extends('layout.homepage-molisana')
 @section('content')
   {{-- questa è la main --}}
-  <div class="container">
+  <div class="main-container">
 
 
     <h2>LE LUNGHE</h2>
@@ -162,9 +162,11 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
 
         @if ($pasta['tipo'] == 'lunga')
 
-          <div class="single-box">
-            <img src="{{ $pasta['src'] }}">
-          </div>
+          <a href="#">
+            <div class="single-box">
+              <img src="{{ $pasta['src'] }}">
+            </div>
+          </a>
 
         @endif
 
@@ -181,9 +183,11 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
 
         @if ($pasta['tipo'] == 'corta')
 
-          <div class="single-box">
-            <img src="{{ $pasta['src'] }}">
-          </div>
+          <a href="#">
+            <div class="single-box">
+              <img src="{{ $pasta['src'] }}">
+            </div>
+          </a>
 
         @endif
 
@@ -199,9 +203,11 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
 
         @if ($pasta['tipo'] == 'cortissima')
 
-          <div class="single-box">
-            <img src="{{ $pasta['src'] }}">
-          </div>
+          <a href="#">
+            <div class="single-box">
+              <img src="{{ $pasta['src'] }}">
+            </div>
+          </a>
 
         @endif
 

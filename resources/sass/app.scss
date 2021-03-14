@@ -4,36 +4,41 @@ body {
   background-color: white;
   color: black;
 
+ .container {
 
-  header {
-    border: 1px solid red;
-  }
+   header {
+     border: 1px solid red;
+   }
 
-  main {
+   main {
 
-    .container {
-      // width: 1392px;
-      width: 1000px;
-      margin: auto;
-      border: 1px solid blue;
+     .main-container {
+       // width: 1392px;
+       width: 1000px;
+       margin: auto;
+       border: 1px solid blue;
 
-      .quality {
-        @include flex-column-between;
+       .quality {
+         @include flex-column-between;
+         border: 1px solid green;
 
-        .single-box {
-          // width: 200px;
-          border: 1px solid red;
-          margin: 10px;
+         .single-box {
+           // width: 200px;
+           border: 1px solid red;
+           margin: 5px;
 
-          img {
-            width: 277px;
-            vertical-align: middle;
-          }
-        }
+           img {
+             width: 277px;
+             vertical-align: middle;
+           }
+         }
 
-      }
+       }
 
-    }
-  }
+     }
+   }
+   
+ }
+
 
 }

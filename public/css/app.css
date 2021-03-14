@@ -2,24 +2,25 @@ body {
   background-color: white;
   color: black;
 }
-body header {
+body .container header {
   border: 1px solid red;
 }
-body main .container {
+body .container main .main-container {
   width: 1000px;
   margin: auto;
   border: 1px solid blue;
 }
-body main .container .quality {
+body .container main .main-container .quality {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  border: 1px solid green;
 }
-body main .container .quality .single-box {
+body .container main .main-container .quality .single-box {
   border: 1px solid red;
-  margin: 10px;
+  margin: 5px;
 }
-body main .container .quality .single-box img {
+body .container main .main-container .quality .single-box img {
   width: 277px;
   vertical-align: middle;
 }
