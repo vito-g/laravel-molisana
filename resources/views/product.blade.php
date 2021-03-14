@@ -131,5 +131,5 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
 
 {{-- questa è la pagina prodotto {{0}} --}}
 {{-- {{ $data[0]['descrizione'] }} --}}
-questa è la pagina prodotto {{$idProduct}}
+questa è la pagina prodotto {{$idProduct + 1}}
 {{ $data[$idProduct]['descrizione'] }}

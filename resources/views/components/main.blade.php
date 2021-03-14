@@ -145,7 +145,7 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
         {{-- <a href="/product/1"> --}}
         @if ($pasta['tipo'] == 'lunga')
 
-          <a href="/product/1">
+          <a href="/product/{{$key}}">
             <div class="single-box">
               <img src="{{ $pasta['src'] }}">
             </div>
@@ -169,7 +169,7 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
 
         @if ($pasta['tipo'] == 'corta')
 
-          <a href="#">
+          <a href="/product/{{$key}}">
             <div class="single-box">
               <img src="{{ $pasta['src'] }}">
             </div>
@@ -192,7 +192,7 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
 
         @if ($pasta['tipo'] == 'cortissima')
 
-          <a href="#">
+          <a href="/product/{{$key}}">
             <div class="single-box">
               <img src="{{ $pasta['src'] }}">
             </div>
