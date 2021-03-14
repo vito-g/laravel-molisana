@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="{{asset ('css/app.css')}}">
-    <title>homepage-molisana</title>
+    <title>laravel-molisana</title>
   </head>
   <body>
 
