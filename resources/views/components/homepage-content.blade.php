@@ -141,8 +141,6 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
 
       @foreach ($data as $key => $pasta)
 
-        {{-- <a href="/product/{id}"> --}}
-        {{-- <a href="/product/1"> --}}
         @if ($pasta['tipo'] == 'lunga')
 
           <a href="/product/{{$key}}">
@@ -152,7 +150,6 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
           </a>
 
         @endif
-      {{-- </a> --}}
 
       @endforeach
 
