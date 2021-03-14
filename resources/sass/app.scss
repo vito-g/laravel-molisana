@@ -1,4 +1,4 @@
-//
+@import "layout";
 
 body {
   background-color: white;
@@ -9,12 +9,31 @@ body {
     border: 1px solid red;
   }
 
-  .single-box {
-    // width: 200px;
-    border: 1px solid red;
+  main {
 
-    img {
-      width: 200px;
+    .container {
+      // width: 1392px;
+      width: 1000px;
+      margin: auto;
+      border: 1px solid blue;
+
+      .quality {
+        @include flex-column-between;
+
+        .single-box {
+          // width: 200px;
+          border: 1px solid red;
+          margin: 10px;
+
+          img {
+            width: 277px;
+            vertical-align: middle;
+          }
+        }
+
+      }
+
     }
   }
+
 }

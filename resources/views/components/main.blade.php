@@ -151,6 +151,8 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
 @extends('layout.homepage-molisana')
 @section('content')
   {{-- questa è la main --}}
+  <div class="container">
+
 
     <h2>LE LUNGHE</h2>
 
@@ -158,16 +160,19 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
 
       @foreach ($data as $key => $pasta)
 
-          @if ($pasta['tipo'] == 'lunga')
+        @if ($pasta['tipo'] == 'lunga')
 
-            <div class="single-box">
-              <img src="{{ $pasta['src'] }}">
-            </div>
-            
-          @endif
+          <div class="single-box">
+            <img src="{{ $pasta['src'] }}">
+          </div>
+
+        @endif
 
       @endforeach
 
     </div>
+
+
+  </div>
 
 @endsection
