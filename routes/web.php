@@ -61,3 +61,9 @@ Route::get('/product/{id}', function ($id) {
     $data = config('pasta-data');//pasta-data è il nome del file che vado a richiamare dal folder 'config
     return view('components.product-content', ['idProduct' => $id, 'data' => $data]);
 });
+
+
+//Se non viene passato alcun id, relativo alla pagina di prodotto, verrebbe caricata, allo stato attuale, una pagina di errore (404). Posso bypassare il problema attraverso una 'redirect' che mi reindirizzerebbe, per es. alla mia home; esattamente come di seguito:
+Route::get('/product', function () {
+    return redirect('/homepage');
+});
