@@ -137,7 +137,10 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
     {{-- questa è la pagina prodotto {{$idProduct + 1}} --}}
     <img src="{{ $data[$idProduct]['src-h'] }}" alt="">
     <img src="{{ $data[$idProduct]['src-p'] }}" alt="">
-    {{ $data[$idProduct]['descrizione'] }}
+
+    <div class="description">
+      {{ $data[$idProduct]['descrizione'] }}
+    </div>
 
     {{-- {{ $data[$idProduct]['src-p'] }} --}}
 

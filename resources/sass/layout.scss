@@ -6,3 +6,9 @@
   // align-content: space-between;
   flex-wrap: wrap;
 }
+
+@mixin W-1000-container {
+  width: 1000px;
+  margin: auto;
+  border: 1px solid blue;
+}

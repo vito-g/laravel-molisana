@@ -19,14 +19,18 @@ body {
            width: 100%;
 
          }
-         
+
+         .description {
+            @include W-1000-container;
+         }
      }
 
      .main-container {
+       @include W-1000-container;
        // width: 1392px;
-       width: 1000px;
-       margin: auto;
-       border: 1px solid blue;
+       // width: 1000px;
+       // margin: auto;
+       // border: 1px solid blue;
 
        .quality {
          @include flex-column-between;
