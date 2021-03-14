@@ -46,6 +46,6 @@ Route::get('/product/{id}', function ($id) {
     return view('components.product-content', ['idProduct' => $id]);
 });
 // --------------------------------------------------------
-Route::get('/homepage-molisana', function () {
+Route::get('/homepage', function () {
     return view('components.homepage-content');
 });
