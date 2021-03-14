@@ -47,5 +47,5 @@ Route::get('/product/{id}', function ($id) {
 });
 // --------------------------------------------------------
 Route::get('/homepage-molisana', function () {
-    return view('components.main');
+    return view('components.homepage-content');
 });
