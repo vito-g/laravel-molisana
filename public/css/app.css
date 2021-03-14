@@ -15,6 +15,7 @@ body .container main .zoomIn-product .description {
   width: 1000px;
   margin: auto;
   border: 1px solid blue;
+  padding-bottom: 20px;
 }
 body .container main .main-container {
   width: 1000px;
