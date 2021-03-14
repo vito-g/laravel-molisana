@@ -129,7 +129,9 @@
 
 //Usando il file $data preso da config posso mettere a commento quanto presente nel tag 'php'
 
-// dump($data);//N.B.: è il mio $+'data' specificato nel return relativo al file config. Ho preferito utilizzare il nome 'data' perchè qui sotto possa mantenere $data
+// --------------------------------------------------------
+// dump($data);//N.B.: è il mio $+'data' specificato nel return relativo al file config. Ho preferito utilizzare il nome 'data' perchè qui sotto io possa mantenere $data
+// --------------------------------------------------------
 
 @endphp
 

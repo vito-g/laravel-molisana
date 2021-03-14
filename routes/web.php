@@ -25,24 +25,38 @@ Route::get('/', function () {
 //     return view('homepage');
 // });
 
-//Prendo $data direttamenta da pasta-data.php del folder 'config' riscrivo le istruzioni qui di seguito come più sotto(**)
-// Route::get('/product/{id}', function ($id) {
-//     $data = config('pasta-data');
-//     return view('components.product-content', ['idProduct' => $id, 'data' => $data]);
+// -----------------------------------------------------------
+//Anche non mettendo a commento le istruzioni che seguono, queste verrebbero invalidate perchè cmq sovrascritte da quelle più in basso
+
+//Con $data disponibile in homepage-content.php:
+
+// Route::get('/homepage', function () {
+//     return view('components.homepage-content');
 // });
 
-Route::get('/homepage', function () {
-    return view('components.homepage-content');
-});
 
-//Prendo $data direttamenta da pasta-data.php del folder 'config' e lo invio come parametro al template homepage-content.blade.php in cui diventerà una variabile
+
+//Con $data disponibile in product-content.php:
+
+// Route::get('/product/{id}', function ($id) {
+//   $data = config('pasta-data');
+//   return view('components.product-content', ['idProduct' => $id, 'data' => $data]);
+// });
+// -----------------------------------------------------------
+
+//(*)Prendendo $data direttamenta da pasta-data.php del folder 'config' e inviandolo come parametro al template homepage-content.blade.php in cui diventerà una variabile:
+
 Route::get('/homepage', function () {
     // dump('ciao');
     $data = config('pasta-data');
     // dump($data);
     return view('components.homepage-content', ['data' => $data]);
 });
-//(**)Prendo $data direttamenta da pasta-data.php del folder 'config' e lo invio come parametro al template product-content.blade.php in cui diventerà una variabile
+
+
+
+//(**)Prendendo $data direttamenta da pasta-data.php del folder 'config' e inviandolo, assieme all'id, come parametro al template product-content.blade.php in cui diventerà una variabile:
+
 Route::get('/product/{id}', function ($id) {
     $data = config('pasta-data');
     return view('components.product-content', ['idProduct' => $id, 'data' => $data]);
