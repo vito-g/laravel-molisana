@@ -16,6 +16,11 @@ body {
      .zoomIn-product {
         background-color: #b7dae5;
 
+        .title {
+          text-align: center;
+          padding: 20px;
+        }
+
          img {
            width: 100%;
          }
@@ -35,11 +40,11 @@ body {
 
        .quality {
          @include flex-column-between;
-         border: 1px solid green;
+         // border: 1px solid green;
 
          .single-box {
            // width: 200px;
-           border: 1px solid red;
+           // border: 1px solid red;
            margin: 5px;
 
            img {

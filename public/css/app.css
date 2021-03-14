@@ -14,6 +14,10 @@ body .container header, body .container footer {
 body .container main .zoomIn-product {
   background-color: #b7dae5;
 }
+body .container main .zoomIn-product .title {
+  text-align: center;
+  padding: 20px;
+}
 body .container main .zoomIn-product img {
   width: 100%;
 }
@@ -32,10 +36,8 @@ body .container main .main-container .quality {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 1px solid green;
 }
 body .container main .main-container .quality .single-box {
-  border: 1px solid red;
   margin: 5px;
 }
 body .container main .main-container .quality .single-box img {
