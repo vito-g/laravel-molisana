@@ -48,7 +48,7 @@ Route::get('/', function () {
 
 Route::get('/homepage', function () {
     // dump('ciao');
-    $data = config('pasta-data');
+    $data = config('pasta-data');//pasta-data è il nome del file che vado a richiamare dal folder 'config
     // dump($data);
     return view('components.homepage-content', ['data' => $data]);
 });
@@ -58,6 +58,6 @@ Route::get('/homepage', function () {
 //(**)Prendendo $data direttamenta da pasta-data.php del folder 'config' e inviandolo, assieme all'id, come parametro al template product-content.blade.php in cui diventerà una variabile:
 
 Route::get('/product/{id}', function ($id) {
-    $data = config('pasta-data');
+    $data = config('pasta-data');//pasta-data è il nome del file che vado a richiamare dal folder 'config
     return view('components.product-content', ['idProduct' => $id, 'data' => $data]);
 });
