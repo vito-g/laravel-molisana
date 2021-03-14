@@ -1,3 +1,3 @@
 <header>
-  Questo è l'header! Certo!
+  Questo è l'header!
 </header>

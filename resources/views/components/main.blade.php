@@ -141,20 +141,24 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
 
       @foreach ($data as $key => $pasta)
 
+        {{-- <a href="/product/{id}"> --}}
+        {{-- <a href="/product/1"> --}}
         @if ($pasta['tipo'] == 'lunga')
 
-          <a href="/product/{id}">
+          <a href="/product/1">
             <div class="single-box">
               <img src="{{ $pasta['src'] }}">
             </div>
           </a>
 
         @endif
+      {{-- </a> --}}
 
       @endforeach
 
     </div>
     {{-- End Pasta Lunga --}}
+
 
     {{-- Pasta Corta --}}
     <h2>LE CORTE</h2>
@@ -177,6 +181,7 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
 
     </div>
     {{-- End Pasta Corta --}}
+
 
     {{-- Pasta Cortissima --}}
     <h2>LE CORTISSIME</h2>

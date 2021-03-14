@@ -21,7 +21,7 @@ body {
        .quality {
          @include flex-column-between;
          border: 1px solid green;
-
+          
          .single-box {
            // width: 200px;
            border: 1px solid red;
@@ -37,7 +37,7 @@ body {
 
      }
    }
-   
+
  }
 
 
