@@ -21,9 +21,9 @@ Route::get('/', function () {
 // Route:: view('/', 'welcome');
 
 //Se decommentata viene invalidata perchè sovrascritta dall'altra get alla homepage più in basso di questa. L'ultima istruzione a cascata vince.
-Route::get('/homepage', function () {
-    return view('homepage');
-});
+// Route::get('/homepage', function () {
+//     return view('homepage');
+// });
 
 // Route::get('/product', function () {
 //     return view('product');
