@@ -1,7 +1,13 @@
 body {
-  background-color: grey;
-  color: red;
+  background-color: white;
+  color: black;
 }
 body header {
   border: 1px solid red;
+}
+body .single-box {
+  border: 1px solid red;
+}
+body .single-box img {
+  width: 200px;
 }
