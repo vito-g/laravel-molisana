@@ -43,7 +43,7 @@ Route::get('/layout', function () {
 
 //Facciamo un esempio con la pagina product:
 Route::get('/product/{id}', function ($id) {
-    return view('product', ['idProduct' => $id]);
+    return view('components.product-content', ['idProduct' => $id]);
 });
 // --------------------------------------------------------
 Route::get('/homepage-molisana', function () {
