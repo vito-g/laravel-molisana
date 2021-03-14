@@ -142,7 +142,6 @@ $data = json_decode($data, true); //Il true si mette perchè l'array è associat
       {{ $data[$idProduct]['descrizione'] }}
     </div>
 
-    {{-- {{ $data[$idProduct]['src-p'] }} --}}
 
   </div>
 
